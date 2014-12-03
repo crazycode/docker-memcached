@@ -11,4 +11,4 @@ RUN apt-get --assume-yes --quiet update && \
 
 EXPOSE 11211
 
-CMD exec /usr/bin/memcached -v -m $MAX_MEM -c $MAX_CONN
+CMD exec /usr/bin/memcached -u nobody -v -m $MAX_MEM -c $MAX_CONN
